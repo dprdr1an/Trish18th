@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <!--
+    ✎ LINK-PREVIEW TEXT
+    Messenger, Viber, WhatsApp etc. read these tags WITHOUT running JavaScript,
+    so they are the only event details written directly in this file.
+    Everything else on the page comes from EVENT_CONFIG at the top of script.js.
+    If you change the name or date there, update these four lines too.
+  -->
+  <title>Tricia’s 18th Birthday Celebration · December 19, 2026</title>
+  <meta name="description" content="You are invited to Tricia’s 18th Birthday Celebration — Saturday, December 19, 2026, 6:00 PM at City Garden Grand Hotel, Makati City." />
+  <meta property="og:title" content="Tricia’s 18th Birthday Celebration" />
+  <meta property="og:description" content="Under a sky full of stars · December 19, 2026 · City Garden Grand Hotel, Makati" />
+  <meta property="og:type" content="website" />
+  <!-- After you host the site, replace with the FULL address, e.g. https://your-site.netlify.app/assets/og-image.jpg -->
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#050817" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Fonts (Cormorant Garamond + DM Sans) are bundled in assets/fonts, so the page also works offline. -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Marks that JavaScript is available, so the opening envelope is only shown when it can be opened. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#invitation">Skip to invitation</a>
+
+  <!-- ============ SHARED SVG SYMBOLS (icons, moon, ornaments) ============ -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#cfdcff" stop-opacity=".55" />
+        <stop offset="45%" stop-color="#6d8fff" stop-opacity=".16" />
+        <stop offset="100%" stop-color="#6d8fff" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient id="moonFace" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="55%" stop-color="#e3e8fb" />
+        <stop offset="100%" stop-color="#b7c3e6" />
+      </linearGradient>
+      <mask id="crescentMask">
+        <rect width="200" height="200" fill="#fff" />
+        <circle cx="122" cy="84" r="46" fill="#000" />
+      </mask>
+      <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#d9bd83" stop-opacity="0" />
+        <stop offset="50%" stop-color="#d9bd83" />
+        <stop offset="100%" stop-color="#d9bd83" stop-opacity="0" />
+      </linearGradient>
+      <radialGradient id="mirrorBall" cx="38%" cy="32%" r="70%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="30%" stop-color="#c7d1ea" />
+        <stop offset="70%" stop-color="#4b62a8" />
+        <stop offset="100%" stop-color="#0b1d49" />
+      </radialGradient>
+      <clipPath id="ballClip"><circle cx="30" cy="30" r="27" /></clipPath>
+      <radialGradient id="cHalo" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#dfe6ff" stop-opacity=".9" />
+        <stop offset="25%" stop-color="#8fa6ff" stop-opacity=".35" />
+        <stop offset="60%" stop-color="#8275d6" stop-opacity=".1" />
+        <stop offset="100%" stop-color="#8275d6" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+
+    <symbol id="moon" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="98" fill="url(#moonGlow)" />
+      <g mask="url(#crescentMask)">
+        <circle cx="100" cy="100" r="50" fill="url(#moonFace)" />
+        <circle cx="80" cy="118" r="6" fill="#b9c4e6" opacity=".45" />
+        <circle cx="70" cy="92" r="3.5" fill="#b9c4e6" opacity=".4" />
+        <circle cx="92" cy="136" r="4" fill="#b9c4e6" opacity=".35" />
+      </g>
+    </symbol>
+
+    <symbol id="star4" viewBox="0 0 24 24">
+      <path d="M12 0 C12.8 7.5 16.5 11.2 24 12 C16.5 12.8 12.8 16.5 12 24 C11.2 16.5 7.5 12.8 0 12 C7.5 11.2 11.2 7.5 12 0Z" fill="currentColor" />
+    </symbol>
+
+    <symbol id="mirror-ball" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="27" fill="url(#mirrorBall)" />
+      <g clip-path="url(#ballClip)" stroke="#0b1d49" stroke-opacity=".55" stroke-width=".7" fill="none">
+        <ellipse cx="30" cy="30" rx="27" ry="6" /><ellipse cx="30" cy="30" rx="27" ry="14" /><ellipse cx="30" cy="30" rx="27" ry="21" />
+        <ellipse cx="30" cy="30" rx="6" ry="27" /><ellipse cx="30" cy="30" rx="14" ry="27" /><ellipse cx="30" cy="30" rx="21" ry="27" />
+        <line x1="30" y1="3" x2="30" y2="57" /><line x1="3" y1="30" x2="57" y2="30" />
+      </g>
+      <circle cx="30" cy="30" r="27" fill="none" stroke="#c7d1ea" stroke-opacity=".5" stroke-width=".6" />
+    </symbol>
+
+    <!-- Line icons: 24×24, stroke = currentColor -->
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M12 12.3l.75 1.85 1.85.75-1.85.75L12 17.5l-.75-1.85-1.85-.75 1.85-.75z" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/><path d="M19.6 3.6a3.2 3.2 0 1 0 1.8 4.6 2.6 2.6 0 0 1-1.8-4.6z"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-6.5-6-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.5 12 21.5 12 21.5z"/><path d="M12 6.8l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.6 4.7 2.6 6.9 7 7.5-4.4.6-6.4 2.8-7 7.5-.6-4.7-2.6-6.9-7-7.5 4.4-.6 6.4-2.8 7-7.5z"/><path d="M19 15.5c.25 1.6.9 2.3 2.5 2.5-1.6.25-2.25.9-2.5 2.5-.25-1.6-.9-2.25-2.5-2.5 1.6-.2 2.25-.9 2.5-2.5zM5 2.8c.2 1.2.7 1.7 1.9 1.9-1.2.2-1.7.7-1.9 1.9-.2-1.2-.7-1.7-1.9-1.9 1.2-.2 1.7-.7 1.9-1.9z"/></g></symbol>
+    <symbol id="i-hotel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5.5L12 3l7 2.5V21"/><path d="M3 21h18M10 21v-4h4v4"/><path d="M8.5 8h1M14.5 8h1M8.5 11h1M14.5 11h1M8.5 14h1M14.5 14h1"/></g></symbol>
+    <symbol id="i-parking" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M9.5 17V7h3.4a3 3 0 0 1 0 6H9.5"/></g></symbol>
+    <symbol id="i-mall" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4.5 21V10M19.5 21V10"/><path d="M3 10l2-5h14l2 5z"/><path d="M8 21v-6h8v6M12 15v6"/></g></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5L3.5 6.5v13L9 17.5l6 2 5.5-2v-13L15 6.5z"/><path d="M9 4.5v13M15 6.5v13"/></g></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.2"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/><path d="M14.5 3.5L17 6l-2.5 2.5"/></g></symbol>
+    <symbol id="i-sms" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10.5H10l-4.5 3.5V16H4z"/><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" stroke-width="2"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 3.5h3l1.5 4-2 1.3a10.5 10.5 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2z"/></g></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9h17M8 2.8v3.4M16 2.8v3.4"/><path d="M9.2 13.2h2.2v4.3M14.6 12.9v4.6"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5"/><path d="M4.5 17.5v2h15v-2"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5.5l10-2V16"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15M6.5 13.5L12 19l5.5-5.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- ============ FIXED SKY: atmosphere + canvas star field ============ -->
+  <div class="atmosphere" aria-hidden="true"></div>
+  <canvas id="sky" class="sky" aria-hidden="true"></canvas>
+
+  <!-- Thin scroll-progress line -->
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- ============ SECTION 1: THE ENVELOPE (opening screen) ============ -->
+  <div class="opener" id="opener" role="dialog" aria-modal="true" aria-labelledby="opener-title">
+    <div class="opener__wave" aria-hidden="true"></div>
+
+    <svg class="opener__lineart" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="190" />
+      <circle cx="200" cy="200" r="160" stroke-dasharray="1 7" />
+      <path d="M200 10v40M200 350v40M10 200h40M350 200h40" />
+      <path d="M66 66l20 20M314 314l20 20M334 66l-20 20M86 314l-20 20" />
+    </svg>
+
+    <div class="opener__inner">
+      <svg class="opener__moon" aria-hidden="true"><use href="#moon" /></svg>
+
+      <div class="envelope" aria-hidden="true">
+        <div class="envelope__back"></div>
+        <div class="envelope__card">
+          <span class="envelope__card-kicker">You are invited</span>
+          <span class="envelope__card-name" data-bind="celebrantName">Tricia</span>
+          <span class="envelope__card-num">XVIII</span>
+        </div>
+        <div class="envelope__pocket"></div>
+        <div class="envelope__flap"><div class="envelope__flap-inner"></div></div>
+        <div class="envelope__seal">
+          <svg viewBox="0 0 60 60">
+            <circle cx="30" cy="30" r="27" class="seal-ring" />
+            <circle cx="30" cy="30" r="22" class="seal-ring seal-ring--thin" />
+            <text x="30" y="35.5" text-anchor="middle" class="seal-letter" data-bind="celebrantInitial">T</text>
+            <use href="#star4" x="26.5" y="8.5" width="7" height="7" class="seal-star" />
+          </svg>
+        </div>
+      </div>
+
+      <p class="opener__eyebrow">✦ &nbsp;An invitation for you&nbsp; ✦</p>
+      <p class="opener__title" id="opener-title">A Night Written in the Stars</p>
+
+      <button class="btn btn--luminous opener__btn" id="open-invite" type="button">
+        <span>Open Your Invitation</span>
+      </button>
+      <button class="opener__skip" id="skip-intro" type="button">Skip intro</button>
+    </div>
+  </div>
+
+  <!-- ============ FLOATING CONTROLS: menu + music ============ -->
+  <div class="controls">
+    <button class="control-btn control-btn--music" id="music-toggle" type="button" aria-pressed="false" aria-label="Background music is off. Turn music on">
+      <svg aria-hidden="true"><use href="#i-music" /></svg>
+      <span class="control-btn__state" aria-hidden="true">Off</span>
+    </button>
+    <button class="control-btn control-btn--menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      <svg class="icon-star" aria-hidden="true"><use href="#star4" /></svg>
+      <span>Menu</span>
+    </button>
+  </div>
+
+  <nav class="menu" id="site-menu" aria-label="Invitation sections" hidden>
+    <button class="menu__close" id="menu-close" type="button" aria-label="Close menu">
+      <svg aria-hidden="true"><use href="#i-close" /></svg>
+    </button>
+    <p class="menu__title">The Evening</p>
+    <ol class="menu__list">
+      <li><a href="#invitation"><span>I</span>The Invitation</a></li>
+      <li><a href="#countdown"><span>II</span>Countdown</a></li>
+      <li><a href="#sagittarius"><span>III</span>The Archer</a></li>
+      <li><a href="#details"><span>IV</span>Event Details</a></li>
+      <li><a href="#venue"><span>V</span>Venue &amp; Parking</a></li>
+      <li><a href="#attire"><span>VI</span>Dress Code</a></li>
+      <li><a href="#rsvp"><span>VII</span>RSVP</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ SECTION 2: HERO ============ -->
+    <section class="hero" id="invitation" aria-labelledby="hero-name">
+      <div class="hero__canopy" id="canopy" aria-hidden="true"></div>
+
+      <div class="hero__chandelier" aria-hidden="true">
+        <div class="hero__chandelier-glow"></div>
+        <svg viewBox="0 0 160 150" class="chandelier">
+          <path class="ch-chain" d="M80 0v26" />
+          <path class="ch-frame" d="M80 26c-6 8-6 14 0 20 6-6 6-12 0-20zM80 46v20" />
+          <path class="ch-frame" d="M80 66c-24 0-48 4-62 16M80 66c24 0 48 4 62 16M80 66c-14 0-28 6-36 18M80 66c14 0 28 6 36 18" />
+          <path class="ch-frame" d="M18 82c18 22 106 22 124 0" />
+          <path class="ch-frame" d="M80 66v30" />
+          <g class="ch-flames">
+            <ellipse cx="18" cy="74" rx="2.2" ry="4" /><ellipse cx="44" cy="76" rx="2.2" ry="4" /><ellipse cx="80" cy="58" rx="2.2" ry="4" /><ellipse cx="116" cy="76" rx="2.2" ry="4" /><ellipse cx="142" cy="74" rx="2.2" ry="4" />
+          </g>
+          <g class="ch-drops">
+            <path d="M34 92l2 8-2 6-2-6zM56 97l2 9-2 7-2-7zM80 98l2.4 11-2.4 8-2.4-8zM104 97l2 9-2 7-2-7zM126 92l2 8-2 6-2-6z" />
+          </g>
+          <path class="ch-frame" d="M80 96c-3 6-3 10 0 16 3-6 3-10 0-16z" />
+        </svg>
+      </div>
+
+      <div class="hero__ornament hero__ornament--left" aria-hidden="true">
+        <span class="hero__string"></span>
+        <svg class="mirror"><use href="#mirror-ball" /></svg>
+      </div>
+      <div class="hero__ornament hero__ornament--right" aria-hidden="true">
+        <span class="hero__string"></span>
+        <svg class="mirror"><use href="#mirror-ball" /></svg>
+      </div>
+
+      <svg class="hero__moon" data-parallax="0.18" aria-hidden="true"><use href="#moon" /></svg>
+      <div class="hero__constellation constellation-bg" data-constellation="background" data-parallax="0.08" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <!-- ✎ EDIT WORDING: hero lines -->
+        <p class="hero__kicker hero-reveal" style="--i:0">Under a Sky Full of Stars</p>
+        <h1 class="hero__name hero-reveal" id="hero-name" style="--i:1" data-bind="celebrantName">Tricia</h1>
+        <div class="divider hero-reveal" style="--i:2" aria-hidden="true">
+          <span></span><svg><use href="#star4" /></svg><span></span>
+        </div>
+        <p class="hero__invites hero-reveal" style="--i:3">cordially invites you to celebrate</p>
+        <p class="hero__occasion hero-reveal" style="--i:4" data-bind="occasionLine">Her 18th Birthday</p>
+        <p class="hero__date hero-reveal" style="--i:5" data-bind="heroDateLine">December 19, 2026 · 6:00 PM</p>
+        <p class="hero__place hero-reveal" style="--i:6" data-bind="venueShortLine">City Garden Grand Hotel · Makati</p>
+      </div>
+
+      <a class="scroll-cue hero-reveal" style="--i:7" href="#countdown">
+        <span>Scroll to discover</span>
+        <svg aria-hidden="true"><use href="#i-arrow-down" /></svg>
+      </a>
+    </section>
+
+    <!-- ============ SECTION 3: COUNTDOWN ============ -->
+    <section class="section countdown-section" id="countdown" aria-labelledby="countdown-title">
+      <span class="drift drift--1" aria-hidden="true"></span>
+      <span class="drift drift--2" aria-hidden="true"></span>
+      <div class="section__head reveal">
+        <p class="eyebrow">II &nbsp;·&nbsp; The Countdown</p>
+        <h2 class="section__title" id="countdown-title">Until the Stars Align</h2>
+        <p class="section__lede">The night we’ve been waiting for.</p>
+      </div>
+
+      <div class="countdown" id="countdown-clock" role="timer" aria-describedby="countdown-target">
+        <div class="cd-unit reveal" style="--d:0ms">
+          <span class="cd-num" data-unit="days">--</span>
+          <span class="cd-label">Days</span>
+        </div>
+        <div class="cd-unit reveal" style="--d:110ms">
+          <span class="cd-num" data-unit="hours">--</span>
+          <span class="cd-label">Hours</span>
+        </div>
+        <div class="cd-unit reveal" style="--d:220ms">
+          <span class="cd-num" data-unit="minutes">--</span>
+          <span class="cd-label">Minutes</span>
+        </div>
+        <div class="cd-unit reveal" style="--d:330ms">
+          <span class="cd-num" data-unit="seconds">--</span>
+          <span class="cd-label">Seconds</span>
+        </div>
+      </div>
+      <p class="countdown__status" id="countdown-status" aria-live="polite" hidden></p>
+      <p class="countdown__target reveal" id="countdown-target" style="--d:420ms" data-bind="countdownTarget">Saturday, December 19, 2026 · 6:00 PM Philippine Time</p>
+    </section>
+
+    <!-- ============ SECTION 4: SAGITTARIUS ============ -->
+    <section class="section sgr-section" id="sagittarius" aria-labelledby="sgr-title">
+      <div class="section__head reveal">
+        <p class="eyebrow">III &nbsp;·&nbsp; The Celestial Signature</p>
+        <h2 class="section__title" id="sgr-title">Sagittarius</h2>
+      </div>
+
+      <figure class="sgr-figure">
+        <div class="sgr-stage" id="sgr-stage">
+          <span class="sgr-shooting" aria-hidden="true"></span>
+          <div class="sgr-parallax" id="sgr-parallax">
+            <!-- The constellation SVG is drawn here by script.js (see CONSTELLATION data) -->
+            <div data-constellation="main"></div>
+          </div>
+          <p class="sgr-starname" id="sgr-starname" aria-live="polite"></p>
+        </div>
+        <figcaption class="sgr-caption">
+          <span class="sgr-caption__line">Born under the sign of the Archer.</span>
+          <span class="sgr-caption__hint">Tap or hover over a star</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ SECTION 5: DETAILS ============ -->
+    <section class="section details-section" id="details" aria-labelledby="details-title">
+      <span class="drift drift--3" aria-hidden="true"></span>
+      <div class="section__head reveal">
+        <p class="eyebrow">IV &nbsp;·&nbsp; The Celebration</p>
+        <h2 class="section__title" id="details-title">A Night to Remember</h2>
+        <p class="section__lede">An evening of wonder, laughter, and unforgettable memories.</p>
+      </div>
+
+      <ul class="details-grid">
+        <li class="card detail-card reveal" style="--d:0ms">
+          <svg class="detail-card__icon" aria-hidden="true"><use href="#i-calendar" /></svg>
+          <h3 class="detail-card__label">Date</h3>
+          <p class="detail-card__main" data-bind="dateLong">December 19, 2026</p>
+          <p class="detail-card__sub" data-bind="weekday">Saturday</p>
+        </li>
+        <li class="card detail-card reveal" style="--d:120ms">
+          <svg class="detail-card__icon" aria-hidden="true"><use href="#i-clock" /></svg>
+          <h3 class="detail-card__label">Time</h3>
+          <p class="detail-card__main" data-bind="timeRange">6:00 PM – 11:00 PM</p>
+          <p class="detail-card__sub">Philippine Time</p>
+        </li>
+        <li class="card detail-card reveal" style="--d:240ms">
+          <svg class="detail-card__icon" aria-hidden="true"><use href="#i-pin" /></svg>
+          <h3 class="detail-card__label">Venue</h3>
+          <p class="detail-card__main" data-bind="venueName">City Garden Grand Hotel</p>
+          <p class="detail-card__sub" data-bind="city">Makati City, Philippines</p>
+        </li>
+        <li class="card detail-card reveal" style="--d:360ms">
+          <svg class="detail-card__icon" aria-hidden="true"><use href="#i-sparkle" /></svg>
+          <h3 class="detail-card__label">Celebration</h3>
+          <p class="detail-card__main detail-card__main--italic" data-bind="celebrationLine">An evening celebrating Tricia’s 18th birthday</p>
+        </li>
+      </ul>
+
+      <div class="calendar reveal" style="--d:200ms">
+        <button class="btn btn--gold" id="calendar-toggle" type="button" aria-expanded="false" aria-controls="calendar-menu">
+          <span>Add to Calendar</span> <span aria-hidden="true">✦</span>
+        </button>
+        <div class="calendar__menu" id="calendar-menu" hidden>
+          <p class="calendar__menu-title">Save the date</p>
+          <a class="calendar__option" id="cal-google" href="#" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-google" /></svg>
+            <span><strong>Google Calendar</strong><small>Opens a pre-filled event for you to save</small></span>
+          </a>
+          <button class="calendar__option" id="cal-ics" type="button">
+            <svg aria-hidden="true"><use href="#i-download" /></svg>
+            <span><strong>Apple Calendar / Other</strong><small>Downloads a calendar file (.ics)</small></span>
+          </button>
+          <p class="calendar__note">Your calendar app will ask you to confirm before saving.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6: VENUE & PARKING ============ -->
+    <section class="section venue-section" id="venue" aria-labelledby="venue-title">
+      <div class="section__head reveal">
+        <p class="eyebrow">V &nbsp;·&nbsp; Venue &amp; Arrival</p>
+        <h2 class="section__title" id="venue-title">Find Your Way to the Stars</h2>
+        <p class="section__lede">We look forward to welcoming you to an unforgettable evening.</p>
+      </div>
+
+      <article class="card venue-card reveal">
+        <p class="venue-card__label">The Venue</p>
+        <h3 class="venue-card__name" data-bind="venueName">City Garden Grand Hotel</h3>
+        <p class="venue-card__address">
+          <span data-bind="venueAddress">8008 Makati Avenue corner Kalayaan Avenue, Poblacion</span><br />
+          <span data-bind="city">Makati City, Philippines</span>
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--luminous" data-link="map" href="https://www.google.com/maps/search/?api=1&amp;query=City+Garden+Grand+Hotel+Makati" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-map" /></svg><span>View on Map</span>
+          </a>
+          <a class="btn btn--luminous" data-link="directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=City+Garden+Grand+Hotel+Makati" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-route" /></svg><span>Get Directions</span>
+          </a>
+        </div>
+      </article>
+
+      <div class="parking">
+        <div class="parking__head reveal">
+          <div class="divider" aria-hidden="true"><span></span><svg><use href="#star4" /></svg><span></span></div>
+          <h3 class="parking__title">Parking &amp; Arrival</h3>
+          <p class="parking__arrival">Recommended arrival time: <span data-bind="arrivalTime">To Be Announced</span></p>
+        </div>
+        <!-- Parking cards are built from EVENT_CONFIG.parkingOptions in script.js -->
+        <ul class="parking__list" id="parking-list"></ul>
+        <p class="parking__reminder reveal" data-bind="parkingReminder">Parking is subject to availability. We encourage guests to plan their arrival ahead of time.</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7: DRESS CODE ============ -->
+    <section class="section attire-section" id="attire" aria-labelledby="attire-title">
+      <span class="drift drift--4" aria-hidden="true"></span>
+      <div class="section__head reveal">
+        <p class="eyebrow">VI &nbsp;·&nbsp; Attire &amp; Color Palette</p>
+        <h2 class="section__title" id="attire-title">Dressed for the Occasion</h2>
+        <p class="section__lede">An evening beneath a midnight sky deserves a little magic.</p>
+      </div>
+
+      <div class="attire-grid">
+        <article class="card attire-card reveal" style="--d:0ms">
+          <svg class="attire-card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <path d="M60 8c-6 0-9 5-9 9 0 6 9 8 9 14M60 31L20 70h80z" />
+            <use href="#star4" x="92" y="6" width="10" height="10" class="art-star" />
+            <use href="#star4" x="16" y="18" width="7" height="7" class="art-star" />
+          </svg>
+          <h3 class="attire-card__label">Dress Code</h3>
+          <p class="attire-card__value" data-bind="dressCode">To Be Announced</p>
+        </article>
+        <article class="card attire-card reveal" style="--d:140ms">
+          <svg class="attire-card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <circle cx="40" cy="42" r="18" /><circle cx="60" cy="34" r="18" /><circle cx="80" cy="42" r="18" />
+            <use href="#star4" x="96" y="10" width="9" height="9" class="art-star" />
+          </svg>
+          <h3 class="attire-card__label">Color Palette</h3>
+          <p class="attire-card__value" data-bind="colorMotif">To Be Announced</p>
+        </article>
+      </div>
+
+      <p class="attire-note reveal" data-bind="attireNote">Stay tuned for the final attire guidelines and celebration palette. ✦</p>
+
+      <div class="swatches reveal">
+        <ul class="swatches__row" id="swatch-row" aria-label="Color swatches"></ul>
+        <p class="swatches__label" id="swatch-label">Website Theme Preview — Not the Final Guest Dress Code</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 8: RSVP ============ -->
+    <section class="section rsvp-section" id="rsvp" aria-labelledby="rsvp-title">
+      <div class="card rsvp-card reveal">
+        <svg class="rsvp-card__moon" aria-hidden="true"><use href="#moon" /></svg>
+        <p class="eyebrow">VII &nbsp;·&nbsp; RSVP</p>
+        <h2 class="section__title" id="rsvp-title">Will You Join Us?</h2>
+        <p class="section__lede">A special night becomes unforgettable with the people who make it special.</p>
+
+        <p class="rsvp-card__confirm">Kindly confirm your attendance.</p>
+        <p class="rsvp-card__phone">
+          <a data-link="tel" href="tel:+639666347306" data-bind="rsvpPhoneDisplay">0966 634 7306</a>
+        </p>
+
+        <div class="btn-row btn-row--stack">
+          <a class="btn btn--gold" data-link="sms" href="sms:+639666347306">
+            <svg aria-hidden="true"><use href="#i-sms" /></svg><span>RSVP via SMS</span>
+          </a>
+          <a class="btn btn--luminous" data-link="tel" href="tel:+639666347306">
+            <svg aria-hidden="true"><use href="#i-phone" /></svg><span>RSVP via Call</span>
+          </a>
+        </div>
+
+        <button class="copy-btn" id="copy-number" type="button">
+          <svg aria-hidden="true"><use href="#i-copy" /></svg>
+          <span id="copy-number-label">Copy number</span>
+        </button>
+
+        <p class="rsvp-card__reminder">Please RSVP using the contact number above.</p>
+        <p class="rsvp-card__deadline">RSVP deadline: <span data-bind="rsvpDeadline">To Be Announced</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 9: FAREWELL ============ -->
+    <section class="farewell" id="farewell" aria-labelledby="farewell-title">
+      <span class="farewell__shooting" aria-hidden="true"></span>
+      <svg class="farewell__moon" data-parallax="0.12" aria-hidden="true"><use href="#moon" /></svg>
+      <div class="farewell__constellation constellation-bg" data-constellation="background" aria-hidden="true"></div>
+
+      <div class="farewell__content">
+        <!-- ✎ EDIT WORDING: closing lines -->
+        <h2 class="farewell__title reveal" id="farewell-title">Some Nights Become Memories.<br /><em>Some Become Magic.</em></h2>
+        <p class="farewell__sub reveal" style="--d:150ms">Let’s Make This One Unforgettable.</p>
+        <div class="divider reveal" style="--d:250ms" aria-hidden="true"><span></span><svg><use href="#star4" /></svg><span></span></div>
+        <p class="farewell__name reveal" style="--d:300ms" data-bind="celebrantName">Tricia</p>
+        <p class="farewell__occasion reveal" style="--d:380ms">18th Birthday Celebration</p>
+        <p class="farewell__date reveal" style="--d:440ms" data-bind="dateLong">December 19, 2026</p>
+        <p class="farewell__love reveal" style="--d:520ms">With love, we hope to see you there. ✦</p>
+        <a class="btn btn--gold reveal" style="--d:600ms" href="#rsvp" id="final-rsvp"><span>RSVP Now</span></a>
+      </div>
+
+      <footer class="footer">
+        <p><span data-bind="eventTitle">Tricia’s 18th Birthday Celebration</span> · <span data-bind="dateShort">12.19.2026</span></p>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
